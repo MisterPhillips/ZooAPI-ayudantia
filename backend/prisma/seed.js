@@ -21,9 +21,9 @@ async function main() {
 
   console.log('=> Creando especies...');
   const nombresEspecies = ['Mamífero', 'Ave', 'Reptil', 'Anfibio', 'Pez'];
-  const especies = await Promise.all(
+  const especies = await Promise.all( // Crea especies en la base de datos
     nombresEspecies.map((nombre) =>
-      prisma.especie.create({
+      prisma.especie.create({ //se crea una especie en la base de datos con un nombre y una descripción generada por Faker
         data: {
           nombre,
           descripcion: faker.lorem.sentence(),

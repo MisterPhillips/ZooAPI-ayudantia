@@ -1,4 +1,4 @@
-import prisma from '../config/prisma.js';
+import prisma from '../config/prisma.js'; //trae lo datos de la base de datos (son consultas a la base de datos) y los exporta para que puedan ser utilizados en otros archivos.
 
 export const getAllAnimales = (filtros = {}) => {
   const where = {};
